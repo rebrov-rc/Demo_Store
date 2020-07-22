@@ -1,0 +1,137 @@
+.stars-wrap {
+  height: 2em;
+}
+
+.st-wrap {
+  color: #cccccc;
+  font-size: 1.1em;
+  height: 100%;
+  width: 15%;
+}
+
+.st-wrap + .st-wrap {
+  margin-left: .2em;
+}
+
+.yellow {
+  color: #FFBA49;
+}
+
+body {
+  background-color: #f0f0f0;
+}
+
+html, * {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.flx {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.f-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.f-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.f-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.abs {
+  position: absolute;
+}
+
+.options {
+  width: 100%;
+}
+
+.center {
+  margin: auto;
+}
+
+.root-page {
+  max-width: 1440px;
+  width: 100%;
+  min-height: 100vh;
+  margin: auto;
+  background-color: #fff;
+}
+
+.ch-money {
+  cursor: pointer;
+  height: 2.5em;
+  width: 2.5em;
+  border-right: grey solid 1px;
+}
+
+.filter-panel-wrap {
+  height: 2.5em;
+  background-color: #d5dde0;
+}
+
+.panel-view {
+  cursor: pointer;
+  height: 2.5em;
+  width: 2.5em;
+  border-right: grey solid 1px;
+}
+
+.img-small {
+  width: 100px;
+}
+
+.product-cards-wrap {
+  border: #cccccc solid 1.5px;
+  padding: 1em 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.card {
+  margin-left: 1em;
+  position: relative;
+  border: solid 1px #cccccc;
+}
+
+.old-cost {
+  text-decoration: line-through;
+}
+
+.new-cost {
+  color: #DB3022;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.card-discount {
+  top: 11px;
+  left: 8px;
+  color: white;
+  width: 50px;
+  height: 27px;
+  background: #DB3022;
+  border-radius: 29px;
+}
+/*# sourceMappingURL=index.css.map */
