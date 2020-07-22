@@ -76,27 +76,60 @@ html, * {
   background-color: #fff;
 }
 
+.header__top-panel {
+  background-color: #d9ebf0c7;
+}
+
 .ch-money {
   cursor: pointer;
-  height: 2.5em;
-  width: 2.5em;
-  border-right: grey solid 1px;
+  height: 2em;
+  width: 2em;
+  border-right: #cccccc solid 1px;
+}
+
+.convert {
+  color: #73898a;
+}
+
+.my-cart-logo {
+  height: 2em;
+  width: 2em;
+  background-color: #bac1c3;
+  color: white;
+}
+
+.search-btn {
+  cursor: pointer;
+  background-color: #e9672a;
+  color: white;
+}
+
+.left-block {
+  width: 30%;
+}
+
+.center-block {
+  width: 70%;
 }
 
 .filter-panel-wrap {
-  height: 2.5em;
+  height: 2em;
   background-color: #d5dde0;
 }
 
 .panel-view {
   cursor: pointer;
-  height: 2.5em;
-  width: 2.5em;
+  height: 2em;
+  width: 2em;
   border-right: grey solid 1px;
 }
 
 .img-small {
   width: 100px;
+}
+
+.btn-sort-a-to-z {
+  cursor: pointer;
 }
 
 .product-cards-wrap {

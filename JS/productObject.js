@@ -32,7 +32,7 @@ const products = {
                 } 
             },
             color: 'black',
-            size: '5'
+            size: 'L'
         },
         {
             id: '002',
@@ -65,7 +65,7 @@ const products = {
                 } 
             },
             color: 'grey',
-            size: '4'
+            size: 'S'
         },
         {
             id: '003',
@@ -98,7 +98,7 @@ const products = {
                 } 
             },
             color: 'white',
-            size: '6'
+            size: 'M'
         },
         {
             id: '004',
@@ -130,7 +130,7 @@ const products = {
                 } 
             },
             color: 'white',
-            size: '5'
+            size: 'S'
         },
         {
             id: '005',
@@ -163,7 +163,7 @@ const products = {
                 } 
             },
             color: 'white',
-            size: '5'
+            size: 'M'
         }
     ]
 }
