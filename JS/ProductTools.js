@@ -1,26 +1,26 @@
 "use strict"
 class ProdoctTools extends ProductBuild {
     constructor(){
-        super(prodList)
+        super()
         this.views = document.querySelectorAll('.panel-view')
         this.btnSortAlpa = document.querySelector('.btn-sort-a-to-z')
         this.btnsMoney = document.querySelectorAll('.ch-money')
-        this.euro = 0.85
-        this.pound = 0.8
-        this.viewType = 0
-        this.itemPerPage = 4
+        // this.euro = 0.85
+        // this.pound = 0.8
+        // this.viewType = 0
+        this.itemPerPage = 4 
     };
     events(){
         this.views.forEach((item,i) => {
             item.addEventListener('click', () => {
-                this.viewType = i
-                // this.container.innerHTML = ''
+                // this.viewType = i
+                data.viewType = i
                 this.out()
             })
         })
         this.btnsMoney.forEach((item, i) => {
             item.addEventListener('click', () => {
-                this.course = i
+                data.course = i
                 this.out() 
             })
         })
@@ -30,7 +30,7 @@ class ProdoctTools extends ProductBuild {
 
      };
     sortAlphabet(){ 
-        this.prodList.sort((a,b) => {
+        data.prodList.list.sort((a,b) => {
             let nameA = a.name.toLowerCase(), nameB = b.name.toLowerCase()
             if( nameA < nameB ) return -1
             if( nameA > nameB ) return 1

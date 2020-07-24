@@ -1,10 +1,11 @@
 "use strict"
-class AddProduct {
-    constructor(a, added){
+class AddProduct extends ProductBuild{
+    constructor(added){
+        super()
         this.prodItems = document.querySelectorAll('.add-product-to-cart')
         this.cartConteiner = document.querySelector('.my-cart')
         this.counter = 0
-        // this.added = added
+        this.added = added
     }
     init(){
         this.events()
@@ -15,35 +16,49 @@ class AddProduct {
             item.addEventListener('click', () => {
                 let getId = item.getAttribute('id')
                 this.adding(getId)
-                localStorage.setItem('addedProduct', JSON.stringify(productBuild.added))
+                localStorage.setItem('addedProduct', JSON.stringify(this.added))
+            }) 
+            this.added.forEach(itemAd => { 
+                if ( item.getAttribute('id') === itemAd ){
+                    // console.log(getId);
+                    document.getElementById(itemAd).innerHTML = (`
+                        <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                    `)
+                }
+
             }) 
         })
     };
     adding(getId){
-        if ( productBuild.added.indexOf(getId) === -1 && getId != undefined){
-            productBuild.added.push(getId)
+        if ( this.added.indexOf(getId) === -1 && getId != undefined){
+            this.added.push(getId)
             document.getElementById(getId).innerHTML = (`
                 <i class="fa fa-shopping-bag" aria-hidden="true"></i>
             `)
-            console.log();
         }else if(getId != undefined){
-            productBuild.added.splice(productBuild.added.indexOf(getId), 1)
+            this.added.splice(this.added.indexOf(getId), 1)
             document.getElementById(getId).innerHTML = (`
                 <i class="fa fa-plus" aria-hidden="true"></i>
             `)
         }
-        if (productBuild.added.length === 0){
+        if (this.added.length === 0){
             this.cart('#bac1c3','cart is empty' )
         }else{
-            this.cart('#f58923', `${productBuild.added.length} items`)
+            this.cart('#f58923', `${this.added.length} items`)
 
         }
-        console.log(productBuild.added);
-        productBuild.added.forEach(item => { 
-            document.getElementById(item).innerHTML = (`
-                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-            `)
-        })  
+        // console.log(productBuild.added);
+        // this.added.forEach(item => { 
+        //     // if (  )
+        //     console.log(item);
+        //     console.log(getId);
+        //     document.getElementById(item).innerHTML = (`
+        //         <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+        //     `)
+        // }) 
+        // let ppp = this.prodItems[0].getAttribute('id')
+        // console.log(ppp);
+
     };
     cart(bgc, text){
         this.cartConteiner.children[0].style.background = bgc

@@ -28,6 +28,13 @@ html, * {
           box-sizing: border-box;
 }
 
+label {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 .flx {
   display: -webkit-box;
   display: -ms-flexbox;
