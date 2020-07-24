@@ -16,13 +16,25 @@ html, *
     justify-content: space-between
 .f-column
     flex-direction: column
+
+// ---------------------------------
 .abs
     position: absolute
-// ---------------------------------
+.relative
+    position: relative
+.top-list
+    margin-top: 1em
 .options
     width: 100%
 .center
     margin: auto
+
+.cart-color
+    background-color: #bac1c3
+.hover-color:hover
+    background-color: #e2e2e2
+    cursor: pointer
+
 // ---------------------------------
 .root-page
     max-width: 1440px
@@ -41,21 +53,31 @@ html, *
 .convert
     color: #73898a
 // ----- central header --------
+// Search
+.input-wrap
+    padding: 0
+    border: #cccccc 1px solid
+    position: relative
+    input
+        margin: 0
+        padding: 0
+.search-drop-list
+    position: absolute
+    width: 100%
+    z-index: 10
+    border: #cccccc 1px solid
+    background-color: #fff
+// ------
+.my-cart-wrap
+    cursor: pointer
 .my-cart-logo
     height: 2em
     width: 2em
-    background-color: #bac1c3
     color: white
 .search-btn
     cursor: pointer
-    background-color: #e9672a
+    background-color: #DB3022
     color: white
-// ---- Left block -------------
-.left-block
-    width: 30%
-// ---- Central block -----------
-.center-block
-    width: 70%
 // ---- FILTER PANEL -----------
 .filter-panel-wrap
     height: 2em
@@ -69,6 +91,29 @@ html, *
     width: 100px
 .btn-sort-a-to-z
     cursor: pointer
+// ---- Left block -------------
+.left-block
+    width: 30%
+// ---- Central block -----------
+.center-block
+    width: 70%
+.add-product-to-cart
+    cursor: pointer
+    width: 44px
+    height: 44px
+    border-radius: 50%
+    background: #DB3022
+    box-shadow: 0px 4px 4px rgba(219, 48, 34, 0.16)
+    i
+        color: white
+.fa-shopping-bag
+    font-size: 1em
+
+.fa-plus
+    font-size: 1.5em
+.abs-plus
+    top: 71.5%
+    right: 0
 // -----------------------------
 .product-cards-wrap
     border: #cccccc solid 1.5px
