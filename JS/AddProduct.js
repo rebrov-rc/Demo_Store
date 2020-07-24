@@ -38,8 +38,8 @@ class AddProduct {
             this.cart('#f58923', `${productBuild.added.length} items`)
 
         }
-
-        productBuild.added.forEach(item => {
+        console.log(productBuild.added);
+        productBuild.added.forEach(item => { 
             document.getElementById(item).innerHTML = (`
                 <i class="fa fa-shopping-bag" aria-hidden="true"></i>
             `)

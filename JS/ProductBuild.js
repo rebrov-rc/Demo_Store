@@ -14,9 +14,12 @@ class ProductBuild  {
         this.out()
         // this.events()
     };
-    out(){
+    out(search){
+        console.log(this.prodList);
         this.container.innerHTML = ''
-
+        if ( search != undefined ){
+            this.prodList = search
+        }
         this.prodList.forEach((item, i) => {
             if ( this.viewType === 0 ){ 
                 this.container.classList.remove('f-column')
