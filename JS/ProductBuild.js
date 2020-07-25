@@ -15,14 +15,11 @@ class ProductBuild  {
         // this.getProdList()
         this.out()
         // this.events()
-        // console.log(this.addCreated);
     };
     out(search){
         if( localStorage.getItem('addedProduct') ){
             this.addCreated = JSON.parse(localStorage.getItem('addedProduct'))
         }
-        // console.log(data.search.length);
-        // console.log(this.search);
         
         this.container.innerHTML = ''
         if ( data.searchState === true ){
@@ -30,7 +27,6 @@ class ProductBuild  {
                 data.prodList.list = data.search
             // }
         }
-        // console.log(data.prodList.list);
 
         data.prodList.list.forEach((item, i) => {
             if ( data.viewType === 0 ){ 
@@ -60,7 +56,7 @@ class ProductBuild  {
                     <div class='card-rating-wrap'>
                         <div class="rate-widget flx">
                             <div class="stars-wrap sw-${data.prodList.list[i].id} f-center flx"></div>
-                            <div class="title f-center flx">(${this.voters(data.prodList.list[i].rating.voters)})</div>
+                            <div class="title f-center flx"></div>
                     </div>
                     </div>
                     <div class='card-brand'>${data.prodList.list[i].brand}</div>
@@ -97,7 +93,7 @@ class ProductBuild  {
                     <div class='card-rating-wrap f-center flx'>
                         <div class="rate-widget flx">
                             <div class="stars-wrap sw-${data.prodList.list[i].id} f-center flx"></div>
-                            <div class="title f-center flx">(${this.voters(data.prodList.list[i].rating.voters)})</div>
+                            <div class="title f-center flx"></div>
                         </div>
                     </div>
                     <div class='card-buy-btn-wrap flx f-center'>
@@ -156,15 +152,14 @@ class ProductBuild  {
     };
     rating(props){
         for(let i = 0; i < props.list.length; i++ ){
-            // console.log(data.prodList.list[i].rating.object);
-            data.prodList.list[i].rating.object = new Rating('lock'+props.list[i].id, 'sw-'+props.list[i].id, 'wr-'+props.list[i].id, 'stars-'+props.list[i].id)
-            data.prodList.list[i].rating.object.init()
+            data.prodList.list[i].rating.object = new Rating('lock'+props.list[i].id, 'sw-'+props.list[i].id, 'wr-'+props.list[i].id, 'stars-'+props.list[i].id, 'rate-widget .title')
+            data.prodList.list[i].rating.object.init(i)
         }
     };
-    voters(voters){
-        if( voters > 0 ){
-            return voters
-        }else {return 0}
-    };
+    // voters(voters){
+    //     if( voters > 0 ){
+    //         return voters
+    //     }else {return 0}
+    // };
 
 }

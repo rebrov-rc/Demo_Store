@@ -21,15 +21,6 @@ const products = {
             },
             rating: {
                 votes: ['5', '5', '5'],
-                get voters(){return this.votes.length} ,
-                get rate() {  
-                    let res = +this.votes[0]
-                    for( let i = 1; i < this.votes.length; i++ ){
-                        res += +this.votes[i]
-                    }
-                    res = Math.floor(res/this.votes.length)
-                    return res
-                } 
             },
             color: 'black',
             size: 'L'
@@ -53,16 +44,7 @@ const products = {
                 return res 
             },
             rating: {
-                votes: ['5',  '2', '3', '4'],
-                get voters(){return this.votes.length} ,
-                get rate() {  
-                    let res = +this.votes[0]
-                    for( let i = 1; i < this.votes.length; i++ ){
-                        res += +this.votes[i]
-                    }
-                    res = Math.floor(res/this.votes.length)
-                    return res
-                } 
+                votes: ['5',  '2', '3', '4', '5', '4', '4', '5', '3', '3'],
             },
             color: 'grey',
             size: 'S'
@@ -86,16 +68,7 @@ const products = {
                 return res 
             },
             rating: {
-                votes: ['5', '1'],
-                get voters(){return this.votes.length} ,
-                get rate() {  
-                    let res = +this.votes[0]
-                    for( let i = 1; i < this.votes.length; i++ ){
-                        res += +this.votes[i]
-                    }
-                    res = Math.floor(res/this.votes.length)
-                    return res
-                } 
+                votes: ['5', '4', '4', '4', '4', '4']
             },
             color: 'white',
             size: 'M'
@@ -118,16 +91,7 @@ const products = {
                 return res 
             },
             rating: {
-                votes: ['3'],
-                get voters(){return this.votes.length} ,
-                get rate() {  
-                    let res = +this.votes[0]
-                    for( let i = 1; i < this.votes.length; i++ ){
-                        res += +this.votes[i]
-                    }
-                    res = Math.floor(res/this.votes.length)
-                    return res
-                } 
+                votes: ['3']
             },
             color: 'white',
             size: 'S'
@@ -152,15 +116,15 @@ const products = {
             },
             rating: {
                 votes: ['5', '5', '5', '4'],
-                get voters(){return this.votes.length} ,
-                get rate() {  
-                    let res = +this.votes[0]
-                    for( let i = 1; i < this.votes.length; i++ ){
-                        res += +this.votes[i]
-                    }
-                    res = Math.floor(res/this.votes.length)
-                    return res
-                } 
+                // get voters(){return this.votes.length} ,
+                // get rate() {  
+                //     let res = +this.votes[0]
+                //     for( let i = 1; i < this.votes.length; i++ ){
+                //         res += +this.votes[i]
+                //     }
+                //     res = Math.floor(res/this.votes.length)
+                //     return res
+                // } 
             },
             color: 'white',
             size: 'M'
