@@ -22,7 +22,7 @@ const products = {
             rating: {
                 votes: ['5', '5', '5'],
             },
-            color: 'black',
+            color: 'Black',
             size: 'L'
         },
         {
@@ -46,7 +46,7 @@ const products = {
             rating: {
                 votes: ['5',  '2', '3', '4', '5', '4', '4', '5', '3', '3'],
             },
-            color: 'grey',
+            color: 'Blue',
             size: 'S'
         },
         {
@@ -70,7 +70,7 @@ const products = {
             rating: {
                 votes: ['5', '4', '4', '4', '4', '4']
             },
-            color: 'white',
+            color: 'White',
             size: 'M'
         },
         {
@@ -93,7 +93,7 @@ const products = {
             rating: {
                 votes: ['3']
             },
-            color: 'white',
+            color: 'White',
             size: 'S'
         },
         {
@@ -126,7 +126,7 @@ const products = {
                 //     return res
                 // } 
             },
-            color: 'white',
+            color: 'Blue',
             size: 'M'
         }
     ]

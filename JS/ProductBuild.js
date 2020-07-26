@@ -5,7 +5,7 @@ class ProductBuild  {
         // this.viewType = 0
         this.addCreated = []
         // this.search
-        this.prodList =  JSON.parse(JSON.stringify(products)).list
+        // this.prodList =  JSON.parse(JSON.stringify(products)).list
         this.container = document.querySelector('.product-cards-wrap')
     };
     getProdList(){ // ??????????
@@ -161,5 +161,4 @@ class ProductBuild  {
     //         return voters
     //     }else {return 0}
     // };
-
 }
