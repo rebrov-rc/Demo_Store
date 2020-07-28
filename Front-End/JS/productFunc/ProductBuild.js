@@ -147,7 +147,7 @@ class ProductBuild  {
     };
     discount(props){
         if ( props.discount != null ) {
-            return (`<div class='card-discount f-center flx abs'>${props.discount}%</div>`)
+            return (`<div class='card-discount f-center flx abs'>-${props.discount}%</div>`)
         }else{ return '' }
     };
     rating(props){

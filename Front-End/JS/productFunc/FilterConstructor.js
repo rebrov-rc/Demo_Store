@@ -8,8 +8,8 @@ class FilterConstructor extends ProductBuild{
         this.filterBlocks = ['brand', 'color','price', 'size']
         this.items = [ data.prodList.list.brand, data.prodList.list.cost,
         data.prodList.list.color, data.prodList.list.size ]
-        this.min = 1
-        this.max = 1
+        // this.min = 1
+        // this.max = 1
     }
     filterInit(){
         this.minMax()
@@ -17,8 +17,7 @@ class FilterConstructor extends ProductBuild{
         // this.test()
         /**
          * Starter
-         * 
-         */
+         */ 
     }
     minMax(){
         let costLength = []
@@ -26,13 +25,13 @@ class FilterConstructor extends ProductBuild{
         data.prodList.list.forEach(item => {
             costLength.push(+item.cost.new)
         })
-        console.log(costLength);
-        console.log(Math.min.apply(null, costLength));
-        console.log(Math.max.apply(null, costLength));
-        this.min = Math.min.apply(null, costLength)
-        this.max = Math.max.apply(null, costLength)
-        this.input.children[0].children[0].value = this.min
-        this.input.children[1].children[0].value = this.max
+        // console.log(costLength);
+        // console.log(Math.min.apply(null, costLength));
+        // console.log(Math.max.apply(null, costLength));
+        data.costMin = Math.min.apply(null, costLength)
+        data.costMax = Math.max.apply(null, costLength)
+        this.input.children[0].children[0].value = data.costMin
+        this.input.children[1].children[0].value = data.costMax
     }
     filterIn(){
         this.inputs.forEach((item, i) => {
@@ -40,13 +39,13 @@ class FilterConstructor extends ProductBuild{
             if ( this.inputs[i].children[0].type === 'number' ){
                 this.inputs[i].children[0].addEventListener('input', (e)=>{
                     let minMaxValue = false
-                    this.events(minMaxValue,e);
+                    this.events(minMaxValue,e.target.name);
                 })
             }
             item.addEventListener('change', (e) => {
                 let minMaxValue = false
                 if ( e.target.type === 'number' ){ minMaxValue = false }
-                this.events(minMaxValue, e)
+                this.events(minMaxValue, e.target.name)
                 // console.log('It`s Ok!');
                 // this.getProdList()
                 // this.filterBlocks.forEach((item,i) => {
@@ -67,7 +66,7 @@ class FilterConstructor extends ProductBuild{
         })
         if( minMaxValue === true )this.minMax()
         if ( inputMinValue > inputMaxValue){
-            if(e.target.name === 'minCost'){
+            if(e === 'minCost'){
                 this.input.children[0].children[0].value = inputMaxValue
             }else {
                 this.input.children[1].children[0].value = inputMinValue

@@ -207,8 +207,12 @@ label {
   background-color: #303636;
 }
 
+.scroll-left {
+  left: 0;
+}
+
 .scroll-right {
-  right: 0;
+  right: 0px;
 }
 
 .center-block {
