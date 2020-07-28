@@ -10,18 +10,20 @@ class FilterConstructor extends ProductBuild{
         data.prodList.list.color, data.prodList.list.size ]
         this.min = 1
         this.max = 1
-
     }
     filterInit(){
         this.minMax()
         this.filterIn()
         // this.test()
+        /**
+         * Starter
+         * 
+         */
     }
     minMax(){
         let costLength = []
         // input = document.querySelector('.filter-price-tools')
         data.prodList.list.forEach(item => {
-            // console.log(item.cost.new);
             costLength.push(+item.cost.new)
         })
         console.log(costLength);
@@ -58,8 +60,6 @@ class FilterConstructor extends ProductBuild{
         // console.log(this.input.children[0].children[0].value + '=' + this.input.children[1].children[0].value);
         let inputMinValue = +this.input.children[0].children[0].value,
         inputMaxValue = +this.input.children[1].children[0].value
-        // console.log(inputMinValue , inputMaxValue);
-        
         this.getProdList()
         this.filterBlocks.forEach((item,i) => {
             let filterItem = document.querySelector('.filter-' + item + '-tools')
@@ -78,31 +78,22 @@ class FilterConstructor extends ProductBuild{
     } 
     filterOut(filterItem, index, itemII, inputMinValue,inputMaxValue){
         let p = []
-        // console.log(itemII );
         // console.log(filterItem.children[0].children[0].value );
         for ( let i = 0; i < filterItem.children.length; i++ ){
             if ( itemII === 'price' ){ 
-                // p.push(filterItem.children[i].children[0].value)
                 p = [1]
-                // console.log(p.length);
              }else{
                 if( filterItem.children[i].children[0].checked === true ){
                     p.push(filterItem.children[i].children[0].getAttribute('id'))
-                    // console.log(p);
                 }
              }
         }
-        // console.log(p );
-
         if(p.length > 0){
             this.test(p, index, itemII, inputMinValue,inputMaxValue)
         }
         this.out()
-
     };
     test(k, index, itemII, inputMinValue,inputMaxValue){
-
-        // console.log(itemII , this.filterBlocks[0]);
             let vII = []
             for(let i = 0; i < k.length; i++) {
                 data.prodList.list.forEach(item => {
@@ -119,9 +110,7 @@ class FilterConstructor extends ProductBuild{
                     }
                 })
             }
-            // return vII
             data.prodList.list = vII
-
     }
 }
 /**
