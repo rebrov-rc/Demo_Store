@@ -122,7 +122,7 @@ class ProductBuild  {
                     <div class='card-rating-wrap f-center flx'>
                         <div class="rate-widget flx">
                             <div class="stars-wrap sw-${data.prodList.list[i].id} f-center flx"></div>
-                            <div class="title f-center flx">(${this.voters(data.prodList.list[i].rating.voters)})</div>
+                            <div class="title f-center flx"></div>
                         </div>
                     </div>
                     <div class='card-buy-btn-wrap'>
