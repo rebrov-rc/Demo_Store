@@ -4,7 +4,7 @@ class FilterConstructor extends ProductBuild{
         super()
         this.inputs = document.querySelectorAll('.filter-tools label')
         this.filterBTN = document.querySelector('.filter-block-btn')
-        this.input = document.querySelector('.filter-price-tools')
+        // this.input = document.querySelector('.filter-price-tools')
         this.filterBlocks = ['brand', 'color','price', 'size']
         this.items = [ data.prodList.list.brand, data.prodList.list.cost,
         data.prodList.list.color, data.prodList.list.size ]
@@ -30,8 +30,8 @@ class FilterConstructor extends ProductBuild{
         // console.log(Math.max.apply(null, costLength));
         data.costMin = Math.min.apply(null, costLength)
         data.costMax = Math.max.apply(null, costLength)
-        this.input.children[0].children[0].value = data.costMin
-        this.input.children[1].children[0].value = data.costMax
+        data.input.children[0].children[0].value = data.costMin
+        data.input.children[1].children[0].value = data.costMax
     }
     filterIn(){
         this.inputs.forEach((item, i) => {
@@ -57,8 +57,8 @@ class FilterConstructor extends ProductBuild{
     };
     events(minMaxValue, e){
         // console.log(this.input.children[0].children[0].value + '=' + this.input.children[1].children[0].value);
-        let inputMinValue = +this.input.children[0].children[0].value,
-        inputMaxValue = +this.input.children[1].children[0].value
+        let inputMinValue = +data.input.children[0].children[0].value,
+        inputMaxValue = +data.input.children[1].children[0].value
         this.getProdList()
         this.filterBlocks.forEach((item,i) => {
             let filterItem = document.querySelector('.filter-' + item + '-tools')
@@ -67,9 +67,9 @@ class FilterConstructor extends ProductBuild{
         if( minMaxValue === true )this.minMax()
         if ( inputMinValue > inputMaxValue){
             if(e === 'minCost'){
-                this.input.children[0].children[0].value = inputMaxValue
+                data.input.children[0].children[0].value = inputMaxValue
             }else {
-                this.input.children[1].children[0].value = inputMinValue
+                data.input.children[1].children[0].value = inputMinValue
             }
             // this.input.children[1].children[0].value = inputMinValue
         }

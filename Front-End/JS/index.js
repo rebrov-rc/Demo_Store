@@ -1,6 +1,7 @@
 "use strict"
 let data = {
     prodList: JSON.parse(JSON.stringify(products)),
+    input : document.querySelector('.filter-price-tools'),
     search: [],
     searchState: false,
     viewType: 0,
@@ -10,6 +11,28 @@ let data = {
     costMin: 1,
     costMax: 1
 }
+let url = 'http://localhost:3200'
+fetch(url + '/persons')
+.then(res => { return res.json()} )
+.then(response => {
+    data.prodList = response
+    console.log(data.prodList);
+})
+
+// fetch(url + '/checkUser')
+// .then(res => { return res.json()} )
+// .then(response => {
+//     data.prodList = response
+//     console.log(data.prodList);
+// })
+const userAccess = {
+    enter: new UserEnter(),
+    init(){
+        this.enter.init()
+    }
+}
+userAccess.init()
+// --------------------------------
 const productCards = {
     productBuild : new ProductBuild(),
     tools : new ProdoctTools(),
