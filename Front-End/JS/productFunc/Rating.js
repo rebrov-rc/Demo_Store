@@ -10,7 +10,7 @@ class Rating {
     }
     init(i){
         for ( let i = 0; i < 5; i++ ){
-            this.block.innerHTML +=`<div class='st-wrap ${this.items} flex'> <i class="fa fa-star ${this.star} stars" aria-hidden="true"></i></div>`
+            this.block.innerHTML +=`<div class='st-wrap ${this.items} f-center flx'> <i class="fa fa-star ${this.star} stars" aria-hidden="true"></i></div>`
         }        
         let stars = document.querySelectorAll('.' + this.star)
         this.stWrap = document.querySelectorAll('.' + this.items) 

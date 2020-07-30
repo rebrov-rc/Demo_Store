@@ -65,8 +65,8 @@ class ProductBuild  {
                         <div class='card-prod-cost flx'>${this.oldCost(data.prodList.list[i].cost)}</div>
                     </div>
                     <div class='card-prod-characteristics-wrap flx'>
-                        <div class='card-color'>Color: ${data.prodList.list[i].color} </div>
-                        <div class='card-size'> Size: ${data.prodList.list[i].size} </div>
+                        <div class='card-color'><span>Color:</span> ${data.prodList.list[i].color} </div>
+                        <div class='card-size'><span> Size:</span> ${data.prodList.list[i].size} </div>
                     </div>
                 </div>
             `)
