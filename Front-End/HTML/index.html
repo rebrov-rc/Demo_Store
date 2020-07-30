@@ -58,11 +58,21 @@
                     <div class="brand-logo-second-part brand-logo">STORE</div>
                 </div>
             </div>
-            <div class="phone"></div>
+            <div class="phone flx ">
+                <div class="phone-info flx">
+                    <div class="phone-number">
+                       <span> +1 917-</span>722-7425
+                    </div>
+                    <div class="timeOfWorking flx ">
+                        Mon-Fr 9a.m.-6p.m.
+                    </div>
+                </div>
+                <div class="phone-request-call">Request call</div>
+            </div>
             <div class="search-prod-wrap flx f-center">
                 <div class="search-prod flx">
                     <div class="input-wrap">
-                        <input type="text" class='search-input' name="" id="">
+                        <input type="text" class='search-input' placeholder="Search products">
                         <div class="search-drop-list"></div>
                     </div>
                     <div class="search-btn flx f-center">
@@ -82,16 +92,29 @@
                 </div>
             </div>
         </div>
-        <nav><div class="navigation"></div></nav>
+        <nav>
+            <div class="navigation flx">
+                <div class="nav-links">ELECTRONICS</div>
+                <div class="nav-links">APPAREL</div>
+                <div class="nav-links">SPORTS & OUTDOORS</div>
+                <div class="nav-links">OFFICE SUPPLIES</div>
+                <div class="nav-links">VIDEO GAMES</div>
+                <div class="nav-links">BRANDS</div>
+                <div class="nav-links">NEWEST</div>
+                <div class="nav-links">BESTSELLERS</div>
+                <div class="nav-links nav-sales">SALES</div>
+            </div>
+        </nav>
     </header>
     <!--  -->
     <div class="path-line flx">Home / Apparel</div>
     <!--  -->
     <div class="content options flx">
         <div class="left-block">
-            <div>
+            <div class="product-filter-title">PRODUCT FILTER</div>
+            <div class='product-filter'>
                 <div class="filter-brand-wrap">
-                    <div class="filter-brand-title">Brand</div>
+                    <div class="filter-brand-title filter-title">Brand</div>
                     <div class="filter-brand-tools filter-tools">
                         <label ><input type="checkbox" name="Adidas" id="Adidas"> Adidas</label>
                         <label ><input type="checkbox" name="Montblance" id="Montblance"> Montblance</label>
@@ -100,7 +123,7 @@
                     </div>
                 </div>
                 <div class="filter-color-wrap">
-                    <div class="filter-color-title">Color</div>
+                    <div class="filter-color-title filter-title">Color</div>
                     <div class="filter-color-tools filter-tools">
                         <label ><input type="checkbox" name="Blue" id="Blue"> Blue</label>
                         <label ><input type="checkbox" name="Black" id="Black"> Black</label>
@@ -108,11 +131,11 @@
                     </div>
                 </div>
                 <div class="filter-price-wrap">
-                    <div class="filter-price-title">Price</div>
+                    <div class="filter-price-title filter-title">Price</div>
                     <div class="filter-price-tools-inputs">
                         <div class="filter-price-tools filter-tools">
-                           <label><input type="number" value="1" min="1" value="" name="minCost" id=""></label>
-                           <label><input type="number" value="1" min="1" value="" name="maxCost" id=""></label>
+                           <label>$ <input type="number" value="1" min="1" value="" name="minCost" id=""> </label>
+                           <label> - $ <input type="number" value="1" min="1" value="" name="maxCost" id=""></label>
                         </div>
                         <div class="filter-price-tools-widget">
                             <div class="price-scroll flx">
@@ -128,7 +151,7 @@
                     </div>
                 </div>
                 <div class="filter-size-wrap">
-                    <div class="filter-size-title">Size</div>
+                    <div class="filter-size-title filter-title">Size</div>
                     <div class="filter-size-tools filter-tools">
                         <label ><input type="checkbox" name="Small" id="S"> Small</label>
                         <label ><input type="checkbox" name="Medium" id="M"> Medium</label>
@@ -136,7 +159,7 @@
                     </div>
                 </div>
                 <div class="filter-block-btn-wrap">
-                    <div class="filter-block-btn flx f-center">reset</div>
+                    <div class="filter-block-btn flx f-center">Reset</div>
                 </div>
             </div>
         </div>
@@ -145,7 +168,7 @@
             <div class="filter-panel-wrap flx f-between">
                 <div class="filter-panel-sorting flx f-center">
                     <div > Sort Alphabetically </div> 
-                    <div class="btn-sort-a-to-z"> A to Z</div>
+                    <div class="btn-sort-a-to-z flx f-center"> A to Z</div>
                 </div>
                 <div class="filter-panel-view flx">
                     <div class="fp-1 panel-view flx f-center">1</div>
@@ -156,7 +179,13 @@
             <div class="product-cards-wrap flx"></div>
         </div>
     </div>
-    <footer class='options'></footer>
+    <footer class='options'>
+        <div class="footer-wrap">
+            <span>
+                Demo Store 2020
+            </span>
+        </div>
+    </footer>
 </div>
 <!-- MODAL WINDOWS -->
 <div class="modal-login-wrap modal">
