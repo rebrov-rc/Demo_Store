@@ -18,10 +18,6 @@ class Rating {
         this.voteCount.forEach((item,i) => {
             item.innerHTML = `(${this.voters(data.prodList.list[i].rating.votes.length)})`
         })
-        // this.block.addEventListener('mouseout' , () => { this.post(stars)})
-        // if( this.lStorage === null ){this.lStorage = 0}
-        // this.storage(stars, this.lStorage)
-        // this.events(stars)
     };
     rateCounter(stars,iIII) {
         let res = +data.prodList.list[iIII].rating.votes[0]
@@ -38,25 +34,4 @@ class Rating {
             return voters
         }else {return 0}
     };
-    // storage(stars, j = this.lStorage){           // Выключен 
-    //     for( let iII = 0;  iII < j ; iII++ ){
-    //         stars[iII].classList.add('yellow')
-    //     }
-    // };
-    // post(stars) { 
-    //     stars.forEach( item => {            
-    //         item.classList.remove('yellow')
-    //     })
-    //     this.storage(stars)
-    // };
-    // events(stars){
-    //     this.stWrap.forEach((item, i) => {
-    //         item.addEventListener('click' ,  () => { 
-    //             this.lStorage = i + 1
-    //             localStorage.setItem(this.key, this.lStorage)
-    //             this.post(stars)
-    //         })
-    //         // item.addEventListener('mouseover' , ()=>{this.storage(stars, i+1)})
-    //     }) 
-    // };
 }

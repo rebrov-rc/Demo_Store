@@ -5,15 +5,11 @@ class ProdoctTools extends ProductBuild {
         this.views = document.querySelectorAll('.panel-view')
         this.btnSortAlpa = document.querySelector('.btn-sort-a-to-z')
         this.btnsMoney = document.querySelectorAll('.ch-money')
-        // this.euro = 0.85
-        // this.pound = 0.8
-        // this.viewType = 0
         this.itemPerPage = 4 
     };
     events(){
         this.views.forEach((item,i) => {
             item.addEventListener('click', () => {
-                // this.viewType = i
                 data.viewType = i
                 this.out()
             })

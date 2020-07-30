@@ -20,7 +20,6 @@ class AddProduct extends ProductBuild{
             }) 
             this.added.forEach(itemAd => { 
                 if ( item.getAttribute('id') === itemAd ){
-                    // console.log(getId);
                     document.getElementById(itemAd).innerHTML = (`
                         <i class="fa fa-shopping-bag" aria-hidden="true"></i>
                     `)
@@ -47,18 +46,6 @@ class AddProduct extends ProductBuild{
             this.cart('#f58923', `${this.added.length} items`)
 
         }
-        // console.log(productBuild.added);
-        // this.added.forEach(item => { 
-        //     // if (  )
-        //     console.log(item);
-        //     console.log(getId);
-        //     document.getElementById(item).innerHTML = (`
-        //         <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-        //     `)
-        // }) 
-        // let ppp = this.prodItems[0].getAttribute('id')
-        // console.log(ppp);
-
     };
     cart(bgc, text){
         this.cartConteiner.children[0].style.background = bgc

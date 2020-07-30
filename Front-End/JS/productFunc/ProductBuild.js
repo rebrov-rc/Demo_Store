@@ -1,20 +1,14 @@
 "use strict"
 class ProductBuild  { 
     constructor(){
-        // this.course = 0
-        // this.viewType = 0
         this.addCreated = []
-        // this.search
-        // this.prodList =  JSON.parse(JSON.stringify(products)).list
         this.container = document.querySelector('.product-cards-wrap')
     };
-    getProdList(){ // ??????????
+    getProdList(){ 
         data.prodList.list = JSON.parse(JSON.stringify(products)).list
     }
     init(){
-        // this.getProdList()
         this.out()
-        // this.events()
     };
     out(search){
         if( localStorage.getItem('addedProduct') ){
@@ -23,9 +17,7 @@ class ProductBuild  {
         
         this.container.innerHTML = ''
         if ( data.searchState === true ){
-            // if (data.search.length > 0 ){
                 data.prodList.list = data.search
-            // }
         }
 
         data.prodList.list.forEach((item, i) => {
@@ -156,9 +148,4 @@ class ProductBuild  {
             data.prodList.list[i].rating.object.init(i)
         }
     };
-    // voters(voters){
-    //     if( voters > 0 ){
-    //         return voters
-    //     }else {return 0}
-    // };
 }

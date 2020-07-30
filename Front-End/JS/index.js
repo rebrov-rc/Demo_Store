@@ -18,7 +18,7 @@ const userAccess = {
         this.enter.init()
     }
 }
-userAccess.init()
+// userAccess.init()
 // --------------------------------
 const productCards = {
     productBuild : new ProductBuild(),

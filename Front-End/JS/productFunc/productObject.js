@@ -116,15 +116,7 @@ const products = {
             },
             rating: {
                 votes: ['5', '5', '5', '4'],
-                // get voters(){return this.votes.length} ,
-                // get rate() {  
-                //     let res = +this.votes[0]
-                //     for( let i = 1; i < this.votes.length; i++ ){
-                //         res += +this.votes[i]
-                //     }
-                //     res = Math.floor(res/this.votes.length)
-                //     return res
-                // } 
+
             },
             color: 'Blue',
             size: 'M'
