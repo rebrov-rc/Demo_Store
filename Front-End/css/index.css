@@ -17,6 +17,10 @@
   color: #FFBA49;
 }
 
+.rate-widget .title {
+  color: #a1a1a1;
+}
+
 .modal {
   position: fixed;
   top: 0;
